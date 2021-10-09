@@ -1,4 +1,4 @@
-package min_stack_155
+package _55_min_stack
 
 import "math"
 

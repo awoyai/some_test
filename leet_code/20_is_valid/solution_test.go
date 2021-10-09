@@ -1,4 +1,4 @@
-package is_valid_20
+package _0_is_valid
 
 import (
 	"fmt"

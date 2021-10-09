@@ -1,4 +1,4 @@
-package is_palindrome_9
+package __is_palindrome
 
 import "strconv"
 
