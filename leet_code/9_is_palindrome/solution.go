@@ -8,7 +8,7 @@ func IsPalindrome(x int) bool {
 	}
 	xStr := strconv.Itoa(x)
 	len := len(xStr)
-	for i, _ := range xStr {
+	for i := 0; i < len/2; i++ {
 		if xStr[i] != xStr[len-1-i] {
 			return false
 		}
