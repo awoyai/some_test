@@ -2,9 +2,9 @@ package _2_int_to_Roman
 
 var (
 	m = map[string][]string{
-		"I": []string{"I", "V", "X"},
-		"X": []string{"X", "L", "C"},
-		"C": []string{"C", "D", "M"},
+		"I": {"I", "V", "X"},
+		"X": {"X", "L", "C"},
+		"C": {"C", "D", "M"},
 		"M": []string{"M", "Ⅴ", "Ⅹ"},
 	}
 )
