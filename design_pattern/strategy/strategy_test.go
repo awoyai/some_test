@@ -6,5 +6,5 @@ import (
 )
 
 func TestTransPort(t *testing.T)  {
-	GoToShenZhen(12*time.Hour)()
+	GoToShenZhen(12*time.Hour).TransPort()
 }

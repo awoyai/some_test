@@ -5,6 +5,10 @@ import (
 	"time"
 )
 
+type Action interface {
+	TransPort()
+}
+
 type Car struct {
 }
 
@@ -26,13 +30,13 @@ func (c *Tran) TransPort() {
 	fmt.Println("坐高铁")
 }
 
-func GoToShenZhen(wanTime time.Duration) func() {
+func GoToShenZhen(wanTime time.Duration) Action {
 	switch {
 	case wanTime.Minutes() > 5*time.Hour.Minutes() && wanTime.Minutes() < 7*time.Hour.Minutes():
-		return new(Tran).TransPort
+		return new(Tran)
 	case wanTime.Minutes() <= 5*time.Hour.Minutes() && wanTime.Minutes() >= 1*time.Hour.Minutes():
-		return new(Plane).TransPort
+		return new(Plane)
 	default:
-		return new(Car).TransPort
+		return new(Car)
 	}
 }
